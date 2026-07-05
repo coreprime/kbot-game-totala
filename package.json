@@ -1,14 +1,42 @@
 {
   "name": "@coreprime/kbot-game-totala",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Total Annihilation game adapter: weapon-script conventions, COB quick actions, branding, and welcome theming for KBot Studio.",
+  "license": "MIT",
   "main": "index.js",
   "exports": {
     ".": "./index.js",
     "./*": "./*.js"
   },
+  "files": [
+    "index.js",
+    "view3d.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "test": "node --test contract.test.js",
+    "check": "npm run lint && npm run test"
+  },
+  "dependencies": {
+    "@coreprime/kbot-game3d": "^0.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coreprime/kbot-game-totala.git"
+  },
+  "homepage": "https://github.com/coreprime/kbot-game-totala",
+  "bugs": {
+    "url": "https://github.com/coreprime/kbot-game-totala/issues"
   }
 }
