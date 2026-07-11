@@ -4,9 +4,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/coreprime/kbot/filesystem"
-	"github.com/coreprime/kbot/formats/gaf"
-	"github.com/coreprime/kbot/games"
+	"github.com/coreprime/kbot-engine/games"
+	"github.com/coreprime/kbot-io/filesystem"
+	"github.com/coreprime/kbot-io/formats/gaf"
 )
 
 // adapterForTest mounts the real TA install (TA_UNPACKED_PATH) and binds the

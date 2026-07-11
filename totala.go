@@ -8,11 +8,11 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/coreprime/kbot/formats/gaf"
-	"github.com/coreprime/kbot/formats/gamedata/ta"
-	"github.com/coreprime/kbot/formats/tdf"
-	"github.com/coreprime/kbot/games"
-	"github.com/coreprime/kbot/internal/assets"
+	"github.com/coreprime/kbot-engine/games"
+	"github.com/coreprime/kbot-io/formats/gaf"
+	"github.com/coreprime/kbot-io/formats/gamedata/ta"
+	"github.com/coreprime/kbot-io/formats/tdf"
+	"github.com/coreprime/kbot-io/palettes"
 )
 
 func init() { games.Register(Game) }
@@ -47,7 +47,7 @@ func (a *adapter) Game() games.Game { return Game }
 // global returns the install's single palette, loaded once.
 func (a *adapter) global() *gaf.Palette {
 	a.palOnce.Do(func() {
-		a.pal = games.GlobalPalette(a.fs, assets.DefaultPalette)
+		a.pal = games.GlobalPalette(a.fs, palettes.DefaultPalette)
 	})
 	return a.pal
 }
