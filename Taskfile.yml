@@ -42,24 +42,24 @@ tasks:
   vet:
     desc: Run go vet
     cmds:
-      - go vet .
+      - go vet ./totala
 
   build:
     desc: Build the Go package
     cmds:
-      - go build .
+      - go build ./totala
 
   test:
     desc: Run the Go tests (asset-gated tests skip cleanly)
     env:
       ALLOW_SKIP_ASSETS: 'true'
     cmds:
-      - go test .
+      - go test ./totala
 
   lint:
     desc: Run golangci-lint (pinned to the CI version, assumed installed)
     cmds:
-      - golangci-lint run .
+      - golangci-lint run ./totala
 
   # ---- JS ----
   js:
